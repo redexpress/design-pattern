@@ -24,5 +24,12 @@ void demoStragegy()
     model.PerformFly();
 }
 
+void demoObserver()
+{
+    printCaption("Observer");
+    WeatherStation.Run();
+}
+
 demoSingleton();
 demoStragegy();
+demoObserver();
