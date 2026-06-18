@@ -30,6 +30,13 @@ void demoObserver()
     WeatherStation.Run();
 }
 
+void demoDecorator()
+{
+    printCaption("Decorator");
+    StarbuzzCoffee.Run();
+}
+
 demoSingleton();
 demoStragegy();
 demoObserver();
+demoDecorator();
