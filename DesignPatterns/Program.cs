@@ -1,23 +1,23 @@
 ﻿using Redexpress.DesignPatterns;
 void DemoSingleton()
 {
-    printCaption("Singleton");
+    PrintCaption("Singleton");
     var s1 = Singleton.Instance;
     var s2 = Singleton.Instance;
 
     Console.WriteLine(ReferenceEquals(s1, s2));
 }
 
-void printLine() => Console.WriteLine("----------------------------------------");
-void printCaption(string caption) => Console.WriteLine($"=================== {caption} ====================================");
+void PrintLine() => Console.WriteLine("----------------------------------------");
+void PrintCaption(string caption) => Console.WriteLine($"=================== {caption} ====================================");
 
 void DemoStragegy()
 {
-    printCaption("Stragegy");
+    PrintCaption("Stragegy");
     Duck mallard = new MallardDuck();
     mallard.PerformQuack();
     mallard.PerformFly();
-    printLine();
+    PrintLine();
     Duck model = new ModelDuck();
     model.PerformFly();
     model.SetFlyBehavior(new FlyRocketPowered());
@@ -26,26 +26,34 @@ void DemoStragegy()
 
 void DemoObserver()
 {
-    printCaption("Observer");
+    PrintCaption("Observer");
     WeatherStation.Run();
 }
 
 void DemoDecorator()
 {
-    printCaption("Decorator");
+    PrintCaption("Decorator");
     StarbuzzCoffee.Run();
+    PrintLine();
+    Redexpress.DesignPatterns.Platform.InputTest.Run();
 }
 
 void DemoAdatper()
 {
-    printCaption("Adapter");
+    PrintCaption("Adapter");
     DuckTestDrive.Run();
 }
 
 void DemoIterator()
 {
-    printCaption("Iterator");
+    PrintCaption("Iterator");
     MenuTestDrive.Run();
+}
+
+void DemoBuilder()
+{
+    PrintCaption("Builder");
+    BuiderTest.Run();
 }
 
 DemoSingleton();
@@ -54,3 +62,4 @@ DemoObserver();
 DemoDecorator();
 DemoAdatper();
 DemoIterator();
+DemoBuilder();
