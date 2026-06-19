@@ -1,5 +1,5 @@
 ﻿using Redexpress.DesignPatterns;
-void demoSingleton()
+void DemoSingleton()
 {
     printCaption("Singleton");
     var s1 = Singleton.Instance;
@@ -9,9 +9,9 @@ void demoSingleton()
 }
 
 void printLine() => Console.WriteLine("----------------------------------------");
-void printCaption(string caption) => Console.WriteLine($"==== {caption} ====================================");
+void printCaption(string caption) => Console.WriteLine($"=================== {caption} ====================================");
 
-void demoStragegy()
+void DemoStragegy()
 {
     printCaption("Stragegy");
     Duck mallard = new MallardDuck();
@@ -24,19 +24,33 @@ void demoStragegy()
     model.PerformFly();
 }
 
-void demoObserver()
+void DemoObserver()
 {
     printCaption("Observer");
     WeatherStation.Run();
 }
 
-void demoDecorator()
+void DemoDecorator()
 {
     printCaption("Decorator");
     StarbuzzCoffee.Run();
 }
 
-demoSingleton();
-demoStragegy();
-demoObserver();
-demoDecorator();
+void DemoAdatper()
+{
+    printCaption("Adapter");
+    DuckTestDrive.Run();
+}
+
+void DemoIterator()
+{
+    printCaption("Iterator");
+    MenuTestDrive.Run();
+}
+
+DemoSingleton();
+DemoStragegy();
+DemoObserver();
+DemoDecorator();
+DemoAdatper();
+DemoIterator();

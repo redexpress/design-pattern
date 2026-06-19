@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Redexpress.DesignPatterns;
-
-using System;
-
+﻿namespace Redexpress.DesignPatterns;
 public abstract class Beverage
 {
     public virtual string Description { get; set; } = "Unknown Beverage";
