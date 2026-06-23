@@ -74,6 +74,17 @@ void DemoCommand()
     RemoteControlTest.Run();
 }
 
+void DemoTemplateMethod() {
+    PrintCaption("TemplateMethod");
+    BeverageTestDrive.Run();
+}
+
+void DemoState()
+{
+    PrintCaption("State");
+    GumballMachineTest.Run();
+}
+
 DemoSingleton();
 DemoStragegy();
 DemoObserver();
@@ -83,3 +94,5 @@ DemoIterator();
 DemoBuilder();
 DemoFactory();
 DemoCommand();
+DemoTemplateMethod();
+DemoState();
