@@ -1,4 +1,6 @@
 ﻿using Redexpress.DesignPatterns;
+using Redexpress.DesignPatterns.AbstractFactory;
+using Rexexpress.DesignPatterns;
 void DemoSingleton()
 {
     PrintCaption("Singleton");
@@ -56,6 +58,22 @@ void DemoBuilder()
     BuiderTest.Run();
 }
 
+void DemoFactory()
+{
+    PrintCaption("SimpleFactory");
+    SimpleFactoryTest.Run();
+    PrintCaption("FactoryMethod");
+    PizzaTestDriver.Run();
+    PrintCaption("AbstractFactory");
+    AbstractPizzaTestDriver.Run();
+}
+
+void DemoCommand()
+{
+    PrintCaption("Command");
+    RemoteControlTest.Run();
+}
+
 DemoSingleton();
 DemoStragegy();
 DemoObserver();
@@ -63,3 +81,5 @@ DemoDecorator();
 DemoAdatper();
 DemoIterator();
 DemoBuilder();
+DemoFactory();
+DemoCommand();
