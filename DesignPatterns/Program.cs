@@ -1,5 +1,6 @@
 ﻿using Redexpress.DesignPatterns;
 using Redexpress.DesignPatterns.AbstractFactory;
+using Redexpress.DesignPatterns.Platform;
 using Rexexpress.DesignPatterns;
 void DemoSingleton()
 {
@@ -29,7 +30,7 @@ void DemoStragegy()
 void DemoObserver()
 {
     PrintCaption("Observer");
-    WeatherStation.Run();
+    Redexpress.DesignPatterns.WeatherStation.Run();
 }
 
 void DemoDecorator()
@@ -77,6 +78,9 @@ void DemoCommand()
 void DemoTemplateMethod() {
     PrintCaption("TemplateMethod");
     BeverageTestDrive.Run();
+    PrintLine();
+    Console.WriteLine("sort implement IComparable is template method pattern");
+    SortDemo.Run();
 }
 
 void DemoState()
